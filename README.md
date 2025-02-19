@@ -160,12 +160,18 @@ SELECT ?country WHERE {
 sequenceDiagram
     participant Utilisateur
     participant OntologyExtractor
+    participant WordNet
+    participant LSA
+    participant Clustering
     participant OWL_DB
 
     Utilisateur->>OntologyExtractor: Fournit un document texte/XML (ex: "Inception est un film de science-fiction.")
     OntologyExtractor->>OntologyExtractor: Tokenisation et calcul du TF-IDF (Output: ["Inception", "film", "science-fiction"])
-    OntologyExtractor->>OntologyExtractor: Application de LSA et clustering hiérarchique (Output: Concepts "Film", "Science-fiction")
-    OntologyExtractor->>OntologyExtractor: Extraction des concepts et relations sémantiques (Output: Ontologie hiérarchisée)
+    OntologyExtractor->>LSA: Application de LSA pour extraire les concepts (Output: Concepts "Film", "Science-fiction")
+    LSA->>WordNet: Validation et enrichissement des concepts extraits (Output: Synonymes et relations hiérarchiques)
+    WordNet->>OntologyExtractor: Enrichissement des concepts et relations
+    OntologyExtractor->>Clustering: Classification des concepts via clustering hiérarchique (Output: Structure taxonomique)
+    Clustering->>OntologyExtractor: Attribution des relations hiérarchiques (Output: Ontologie hiérarchisée)
     OntologyExtractor->>OWL_DB: Stockage des concepts et relations dans une ontologie OWL (Output: Fichier OWL enregistré)
     Utilisateur->>OntologyExtractor: Pose une requête SPARQL (ex: "Quels sont les films de science-fiction ?")
     OntologyExtractor->>OWL_DB: Exécution de la requête SPARQL
@@ -183,11 +189,12 @@ sequenceDiagram
 ### 2. Diagramme Explicatif : Fonctionnement du LSA avec Exemples
 ```mermaid
 flowchart TD
-    A[Documents texte] -->|Tokenisation & Stopwords| B[Matrice TF-IDF]
+    A[Documents texte] -->|Tokenisation & Stopwords Removal| B[Matrice TF-IDF]
     B -->|Décomposition SVD| C[Matrices U, Σ, V]
     C -->|Réduction de dimension| D[Matrice U réduite]
     D -->|Extraction de concepts| E[Concepts extraits]
-    E -->|Association aux documents| F[Scores pertinence]
+    E -->|Validation via WordNet| F[Concepts enrichis avec synonymes et relations]
+    F -->|Transmission aux étapes de classification| G[Concepts prêts pour clustering]
 ```
 
 ### **1️⃣ Latent Semantic Analysis (LSA) et Singular Value Decomposition (SVD)**
@@ -208,10 +215,10 @@ flowchart TD
 ### 3. Diagramme Explicatif : Fonctionnement de l'Agglomerative Clustering avec Exemples
 ```mermaid
 flowchart TD
-    A[Concepts extraits de LSA] -->|Calcul des distances entre concepts avec la similarité cosinus| B[Matrice de distance]
-    B -->|Fusion itérative des concepts les plus proches selon la distance hiérarchique| C[Construction progressive de la hiérarchie]
-    C -->|Définition des niveaux taxonomiques et classification des concepts| D[Ontologie structurée sous forme d'arbre]
-    D -->|Exportation et stockage sous format OWL| E[Ontologie exploitable dans Protégé et autres éditeurs]
+    A[Concepts enrichis par WordNet] -->|Calcul des distances cosinus| B[Matrice de distance]
+    B -->|Fusion des concepts similaires| C[Construction progressive de la hiérarchie]
+    C -->|Définition des niveaux taxonomiques| D[Ontologie sous forme d'arbre]
+    D -->|Stockage OWL| E[Exportation et exploitation]
 ```
 ### **2️⃣ Clustering Hiérarchique pour structurer l'Ontologie**
 
@@ -299,6 +306,7 @@ Cinéma
 | ❌ **Pas de requêtage en langage naturel** | Impossible d’interroger directement les connaissances. |
 | ❌ **Interprétation difficile des concepts** | Les résultats LSA nécessitent une analyse approfondie. |
 | ❌ **Dépendance aux paramètres du clustering** | Nécessite des réglages précis pour de bons résultats. |
+
 
 
 
