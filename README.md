@@ -84,6 +84,71 @@ sequenceDiagram
     - **Output** : `"capitale de"` → Label attribué à la relation.
 
 ---
+# 📌 Querying Structured Information avec KGQA et BEStQ
+
+## **🔹 Explication**
+Ce diagramme illustre le processus de **requêtage d'informations structurées** à partir d'un **graphe de connaissances** en utilisant **Knowledge Graph Question Answering (KGQA)** et **By-Example Structured Queries (BEStQ)**.
+
+## **🔹 Diagramme de Séquence**
+```mermaid
+sequenceDiagram
+    participant Utilisateur
+    participant Interface
+    participant KGQA
+    participant BEStQ
+    participant RDF_Store
+
+    %% Requête via KGQA
+    Utilisateur->>+Interface: Question en langage naturel (ex: "Quelle est la capitale de l’Italie ?")
+    Interface->>+KGQA: Analyse et conversion en SPARQL
+    KGQA->>+RDF_Store: Exécution de la requête SPARQL
+    RDF_Store-->>KGQA: Résultats (ex: "Rome")
+    KGQA-->>Interface: Réponse formatée ("Rome")
+    Interface-->>Utilisateur: "La capitale de l'Italie est Rome."
+
+    %% Requête via BEStQ
+    Utilisateur->>+Interface: Exemple de requête (ex: "Pays avec une capitale similaire à Paris")
+    Interface->>+BEStQ: Génération de requête basée sur l'exemple
+    BEStQ->>+RDF_Store: Exécution de la requête générée
+    RDF_Store-->>BEStQ: Résultats (ex: "France", "Italie")
+    BEStQ-->>Interface: Réponse formatée
+    Interface-->>Utilisateur: "Pays avec des capitales similaires à Paris : France, Italie."
+```
+
+## **🔹 Explication détaillée des deux méthodes**
+
+### **1️⃣ Knowledge Graph Question Answering (KGQA)**
+📌 **Objectif** : Transformer une question en **langage naturel** en une **requête formelle (SPARQL)** pour interroger un graphe RDF.
+
+📌 **Exemple** :
+- **Input** : *"Quelle est la capitale de l’Italie ?"*
+- **Requête SPARQL générée** :
+```sparql
+SELECT ?capital WHERE {
+    ?capital rdf:type :City .
+    ?capital :isCapitalOf :Italy .
+}
+```
+- **Output** : `"Rome"`
+
+### **2️⃣ By-Example Structured Queries (BEStQ)**
+📌 **Objectif** : Permet aux utilisateurs de **formuler des requêtes complexes** en fournissant des **exemples** au lieu de spécifier directement la requête SPARQL.
+
+📌 **Exemple** :
+- **Input** : *"Pays ayant une capitale similaire à Paris."*
+- **Requête générée automatiquement** :
+```sparql
+SELECT ?country WHERE {
+    ?city rdf:type :Capital .
+    ?city :similarTo :Paris .
+    ?country :hasCapital ?city .
+}
+```
+- **Output** : `["France", "Italie"]`
+
+## **🔹 Conclusion**
+- **KGQA** est utile pour **les requêtes en langage naturel**.
+- **BEStQ** est adapté aux **requêtes complexes où l’utilisateur fournit un exemple au lieu de spécifier directement la requête**.
 
 
 ---
