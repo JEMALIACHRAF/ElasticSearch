@@ -158,16 +158,41 @@ flowchart TD
   4. **Génération d’une ontologie OWL**.
 
 - **Exemple** :
-  - **Input** : Concepts `["Film", "Science-fiction", "Thriller", "Drame"]`
-  - **Fusion des concepts** : `Film et Science-fiction` sont regroupés.
-  - **Hiérarchie finale** :
-    ```
-    Cinéma
-     ├── Science-fiction
-     ├── Thriller
-     ├── Drame
-    ```
-  - **Output** : Ontologie OWL exportable dans Protégé.
+# 📌 Ontologie Hiérarchique avec Clustering Hiérarchique
+
+## **🔹 Processus d'Extraction et Classification des Concepts**
+
+### **🔹 Input**
+Concepts initiaux :
+```plaintext
+["Film", "Science-fiction", "Thriller", "Drame"]
+```
+
+### **🔹 Étape 1 : Calcul des similarités cosinus entre les concepts**
+Les distances sont calculées pour mesurer la proximité entre les concepts :
+```plaintext
+Sim(Film, Science-fiction) = 0.85
+Sim(Film, Thriller) = 0.65
+Sim(Film, Drame) = 0.50
+Sim(Science-fiction, Thriller) = 0.30
+```
+
+### **🔹 Étape 2 : Fusion des concepts les plus similaires**
+Les concepts ayant une **forte similarité** sont fusionnés :
+```plaintext
+"Film" et "Science-fiction" sont fusionnés en un seul nœud.
+```
+
+### **🔹 Étape 3 : Classification hiérarchique finale**
+L'ontologie est organisée en une structure arborescente :
+```plaintext
+Cinéma
+ ├── Science-fiction
+ ├── Thriller
+ ├── Drame
+```
+
+
 
 ### **3️⃣ Génération de l'Ontologie en OWL**
 
