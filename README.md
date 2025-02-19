@@ -1,4 +1,3 @@
-
 # 📌 Processus Détaillé des Deux Approches avec Exemples Concrets d’Inputs/Outputs et Diagrammes de Séquences
 
 ## 🔷 Article 1 : Extraction et Interrogation de Graphes de Connaissances avec OKgraph
@@ -26,15 +25,66 @@ sequenceDiagram
     RDF_Store->>Utilisateur: Résultats formatés (ex: "Rome")
 ```
 
-**Exemple détaillé** :
-- **Input** : Texte brut "Rome est la capitale de l'Italie. Milan est une ville italienne."
-- **Étape 1** : Tokenisation → `['Rome', 'capitale', 'Italie', 'Milan', 'ville', 'italienne']`
-- **Étape 2** : Word Embeddings génère des vecteurs de mots pour identifier les relations et entités similaires.
-- **Étape 3** : Set Expansion trouve des entités proches (ex: "Venise", "Naples").
-- **Étape 4** : Set Labeling classe les entités extraites en "Ville", "Pays", etc.
-- **Étape 5** : Relation Expansion détecte les liens entre les entités (`Rome -> capitale de -> Italie`).
-- **Étape 6** : Relation Labeling attribue un nom aux relations (`capitale de`, `situé en`).
-- **Output final** : Un graphe RDF stocké avec les triples `{("Rome", "capitale de", "Italie"), ("Milan", "situé en", "Italie")}`.
+### 2. Diagramme Explicatif : Détails du Fonctionnement des Étapes Clés (Set Expansion, Set Labeling, Relation Expansion, Relation Labeling)
+```mermaid
+sequenceDiagram
+    participant OKgraph
+    participant WordEmbeddings
+    participant Corpus
+    participant RDF_Store
+
+    OKgraph->>+WordEmbeddings: Recherche d’entités similaires (Set Expansion)
+    WordEmbeddings->>+OKgraph: Calcul de similarité cosinus, expansion des entités (Output: Ex: ["Rome", "Milan", "Venise"])
+    OKgraph->>+Corpus: Analyse des cooccurrences pour classification des entités (Set Labeling)
+    Corpus->>+OKgraph: Extraction des patterns linguistiques (Output: Ex: "Rome" classé comme "Ville")
+    OKgraph->>+OKgraph: Identification des relations entre entités (Relation Expansion)
+    OKgraph->>+Corpus: Recherche de relations sémantiques récurrentes (Output: Ex: "Rome -> capitale de -> Italie")
+    OKgraph->>+Corpus: Détection des mots clés récurrents pour le labeling des relations (Relation Labeling)
+    Corpus->>+OKgraph: Attribution d'étiquettes aux relations (Output: "capitale de")
+    OKgraph->>+RDF_Store: Stockage des nouvelles entités et relations sous forme de triplets RDF
+```
+
+### 2. Explication détaillée :
+- **Set Expansion** : Trouve des entités similaires en utilisant **des embeddings de mots et la similarité cosinus**.
+  - **Méthode** : OKgraph utilise un **modèle pré-entraîné** de Word Embeddings (Word2Vec, FastText) pour rechercher **des mots proches dans l'espace vectoriel**.
+  - **Exemple** :
+    - **Input** : `["Rome", "Milan", "Bari"]`
+    - **Traitement** : Recherche des entités ayant **des vecteurs proches** dans un **modèle pré-entraîné sur un grand corpus** (ex: Wikipédia, articles scientifiques).
+    - **Output** : `["Venise", "Naples", "Turin"]` → Entités similaires trouvées.
+
+- **Set Labeling** : Associe une **catégorie aux entités** en analysant **leurs cooccurrences** dans un corpus.
+  - **Méthode** : OKgraph scanne des documents textuels pour voir **quels mots apparaissent souvent à côté des entités détectées**.
+  - **Exemple** :
+    - **Input** : `["Rome", "Venise"]`
+    - **Traitement** : Recherche des phrases contenant ces mots : `["Rome est une ville ancienne.", "Venise est une ville d'art."]`
+    - **Analyse** : Les mots `"ville"` et `"ancienne"` apparaissent fréquemment avec `"Rome"`, donc `"Rome"` est classé comme **Ville**.
+    - **Output** : `"Ville"` → Catégorie attribuée.
+
+- **Relation Expansion** : Identifie de **nouvelles relations** en étudiant les **patterns contextuels**.
+  - **Méthode** : OKgraph **prend des relations connues** et les étend en recherchant **des entités similaires** et **des associations sémantiques** dans un corpus.
+  - **Exemple** :
+    - **Input** : `[(Italie, Rome), (France, Paris)]` (relation connue : `"capitale de"`)
+    - **Traitement** :
+      - **Expansion des entités** (`Italie` → `Espagne`, `France` → `Portugal`)
+      - **Expansion des villes associées** (`Rome` → `Madrid`, `Paris` → `Lisbonne`)
+      - **Création de nouvelles paires** (`[(Espagne, Madrid), (Portugal, Lisbonne)]`)
+    - **Output** : `[(Espagne, Madrid), (Portugal, Lisbonne)]` → Nouvelles relations détectées.
+
+- **Relation Labeling** : Attribue un **nom aux relations détectées** en **analysant les mots récurrents** entre les entités.
+  - **Méthode** : OKgraph recherche **les mots qui apparaissent souvent entre deux entités** et leur **attribue une étiquette en fonction de la fréquence**.
+  - **Exemple** :
+    - **Input** : `[(Italie, Rome)]`
+    - **Corpus analysé** :
+      - `"Rome est la capitale de l'Italie."`
+      - `"Paris est la capitale de la France."`
+      - `"Madrid est la capitale de l'Espagne."`
+    - **Traitement** :
+      - Recherche des **mots fréquents entre les paires d'entités**.
+      - `"capitale de"` apparaît dans **95% des cas** → c'est le label retenu.
+    - **Output** : `"capitale de"` → Label attribué à la relation.
+
+---
+
 
 ---
 
@@ -74,11 +124,21 @@ flowchart TD
     D -->|Extraction de concepts| E[Concepts extraits]
     E -->|Association aux documents| F[Scores pertinence]
 ```
-**Exemple détaillé** :
-- **Input** : "Les films de science-fiction sont captivants."
-- **TF-IDF** : Matrice avec `['films', 'science-fiction', 'captivants']`.
-- **SVD** : Décomposition en matrices U, Σ et V pour identifier les concepts dominants (`science-fiction` associé à `films`).
-- **Output** : `Concept extrait = Science-fiction` avec `Score de pertinence = 0.89`.
+
+### **1️⃣ Latent Semantic Analysis (LSA) et Singular Value Decomposition (SVD)**
+
+- **Objectif** : Identifier les concepts cachés en réduisant la dimensionnalité d’une matrice de termes-document.
+- **Étapes** :
+  1. **Matrice terme-document (TF-IDF)** : Calcul de l’importance des mots.
+  2. **Décomposition en valeurs singulières (SVD)** : Extraction des concepts principaux.
+  3. **Réduction de dimension** : Sélection des concepts les plus pertinents.
+  4. **Association aux documents** : Attribution des concepts aux documents.
+
+- **Exemple** :
+  - **Input** : `"Inception est un film de science-fiction réalisé par Christopher Nolan."`
+  - **TF-IDF** : `{"Inception": 0.8, "film": 0.9, "science-fiction": 0.7}`
+  - **Concepts extraits** : `Film, Science-fiction`
+  - **Output** : `"Film de science-fiction"`
 
 ### 3. Diagramme Explicatif : Fonctionnement de l'Agglomerative Clustering avec Exemples
 ```mermaid
@@ -88,16 +148,41 @@ flowchart TD
     C -->|Définition des niveaux taxonomiques et classification des concepts| D[Ontologie structurée sous forme d'arbre]
     D -->|Exportation et stockage sous format OWL| E[Ontologie exploitable dans Protégé et autres éditeurs]
 ```
-**Exemple détaillé** :
-- **Input** : Concepts `['Film', 'Science-fiction', 'Thriller', 'Drame']`
-- **Étape 1** : Matrice de distance cosinus entre les termes (ex : `Sim(Film, Science-fiction) = 0.85`).
-- **Étape 2** : Fusion des concepts ayant les plus fortes similarités (`Film` et `Science-fiction` sont fusionnés).
-- **Étape 3** : Classification hiérarchique des concepts (`Thriller` et `Drame` sont placés sous `Cinéma`).
-- **Output final** : Ontologie structurée avec `Cinéma → [Science-fiction, Thriller, Drame]`.
+### **2️⃣ Clustering Hiérarchique pour structurer l'Ontologie**
 
----
+- **Objectif** : Regrouper les concepts en une taxonomie hiérarchique.
+- **Étapes** :
+  1. **Calcul des distances entre concepts** (similarité cosinus).
+  2. **Fusion des concepts proches** en clusters.
+  3. **Définition des niveaux taxonomiques**.
+  4. **Génération d’une ontologie OWL**.
 
-💡 **Ce fichier README.md structure clairement les processus des deux articles avec des diagrammes enrichis et détaillés pour une meilleure compréhension et implémentation !** 🚀
+- **Exemple** :
+  - **Input** : Concepts `["Film", "Science-fiction", "Thriller", "Drame"]`
+  - **Fusion des concepts** : `Film et Science-fiction` sont regroupés.
+  - **Hiérarchie finale** :
+    ```
+    Cinéma
+     ├── Science-fiction
+     ├── Thriller
+     ├── Drame
+    ```
+  - **Output** : Ontologie OWL exportable dans Protégé.
+
+### **3️⃣ Génération de l'Ontologie en OWL**
+
+```xml
+<owl:Class rdf:ID="Film"/>
+<owl:Class rdf:ID="Science-fiction">
+   <rdfs:subClassOf rdf:resource="#Film"/>
+</owl:Class>
+<owl:Class rdf:ID="Thriller">
+   <rdfs:subClassOf rdf:resource="#Film"/>
+</owl:Class>
+<owl:Class rdf:ID="Drame">
+   <rdfs:subClassOf rdf:resource="#Film"/>
+</owl:Class>
+```
 
 
 
