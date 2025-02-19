@@ -184,6 +184,31 @@ flowchart TD
 </owl:Class>
 ```
 
+## 🔷 Comparaison des Avantages et Limites des Deux Approches
+
+### **🟢 Avantages et 🔴 Limites de OKgraph (Article 1)**
+| | OKgraph |
+|-----------|------------|
+| ✅ **Non supervisé** | Pas besoin d’annotation, fonctionne sur grands corpus non annotés. |
+| ✅ **Expansion efficace** | Génère automatiquement des entités et relations via embeddings. |
+| ✅ **Requêtage en langage naturel** | Répond aux questions via KGQA. |
+| ✅ **Intégration RDF/SPARQL** | Compatible avec les bases RDF et requêtes SPARQL. |
+| ❌ **Dépendance aux embeddings** | Performances liées à la qualité des embeddings (Word2Vec, FastText). |
+| ❌ **Relations difficiles à interpréter** | Certaines relations peuvent être incorrectes ou trop générales. |
+| ❌ **Sensibilité au contexte** | Peut échouer si le corpus est trop limité. |
+| ❌ **Pas de structuration hiérarchique** | Ne crée pas de taxonomie ou de relations hiérarchiques. |
+
+### **🟢 Avantages et 🔴 Limites de LSA + Clustering Hiérarchique (Article 2)**
+| | LSA + Clustering |
+|-----------|------------|
+| ✅ **Taxonomie automatique** | Génère une hiérarchie de concepts. |
+| ✅ **Catégorisation robuste** | LSA extrait des concepts même dans des corpus bruités. |
+| ✅ **Interopérabilité OWL** | Résultats exportables pour Protégé et autres outils d'ontologie. |
+| ✅ **Adaptable à divers domaines** | Fonctionne si le corpus est représentatif. |
+| ❌ **Besoin d’un corpus riche** | Manque de diversité = biais dans les concepts extraits. |
+| ❌ **Pas de requêtage en langage naturel** | Impossible d’interroger directement les connaissances. |
+| ❌ **Interprétation difficile des concepts** | Les résultats LSA nécessitent une analyse approfondie. |
+| ❌ **Dépendance aux paramètres du clustering** | Nécessite des réglages précis pour de bons résultats. |
 
 
 
