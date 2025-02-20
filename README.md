@@ -126,6 +126,7 @@ Nous avons défini un **mapping personnalisé** (`define_mapping.py`) pour optim
 ---
 
 ## **6. Requêtes Elasticsearch et Visualisation Kibana**
+ **6.1 Liste des requêtes exécutées**
 Les requêtes utilisées pour interroger Elasticsearch sont définies dans le fichier `logstash/search_queries.py`
 Nous avons exécuté plusieurs requêtes :
 1. **Requête textuelle** : Recherche des données par ville.
@@ -186,6 +187,20 @@ Nous avons exécuté plusieurs requêtes :
    ```
 
 Les résultats sont stockés dans `logs/results_*.json`.
+### **6.2 Visualisation avec Kibana**
+
+Les captures d’écran ci-dessous montrent différentes visualisations réalisées avec **Kibana** :
+
+#### **Température minimale médiane sur 24 heures par ville**
+![Température minimale médiane](file-Wtye5p3M4R1htMbUsceCTA)
+
+#### **Précipitations médianes sur 24 heures par ville**
+![Précipitations médianes](file-H21ffjXui1ooqravk5uCuk)
+
+#### **Rafales de vent médianes sur 24 heures par ville**
+![Rafales de vent médianes](file-JzTjLTxJjGZPk1tXMu9Mrd)
+
+Ces visualisations permettent de mieux comprendre les tendances climatiques en fonction des différentes variables collectée
 
 ---
 
