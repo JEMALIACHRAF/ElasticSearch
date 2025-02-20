@@ -192,13 +192,13 @@ Les résultats sont stockés dans `logs/results_*.json`.
 Les captures d’écran ci-dessous montrent différentes visualisations réalisées avec **Kibana** :
 
 #### **Température minimale médiane sur 24 heures par ville**
-![Température minimale médiane](file-Wtye5p3M4R1htMbUsceCTA)
+![Température minimale médiane](data_ingestion/Température.png)
 
 #### **Précipitations médianes sur 24 heures par ville**
-![Précipitations médianes](file-H21ffjXui1ooqravk5uCuk)
+![Précipitations médianes](data_ingestion/Pression.png)
 
 #### **Rafales de vent médianes sur 24 heures par ville**
-![Rafales de vent médianes](file-JzTjLTxJjGZPk1tXMu9Mrd)
+![Rafales de vent médianes](data_ingestion/Wind.png)
 
 Ces visualisations permettent de mieux comprendre les tendances climatiques en fonction des différentes variables collectée
 
