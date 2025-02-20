@@ -18,13 +18,16 @@ Ce projet a pour objectif de construire un **pipeline de données** complet en u
 
 Voici un schéma du pipeline de données implémenté :
 
-```
-        [API] ---> [Kafka Producer] ---> [Kafka Topic] ---> [Kafka Consumer] ---> [Logstash] ---> [Elasticsearch] ---> [Kibana]
-                                         |                                               |
-                                         |                                               v
-                                         |                                       [Hadoop / Spark]
-                                         |
-                                      [Stockage JSON]
+
+```mermaid
+flowchart TD;
+    A[API de données] -->|Collecte| B[Producteur Kafka]
+    B -->|Envoi| C[Kafka Topic]
+    C -->|Transmission| D[Consommateur Kafka]
+    D -->|Envoi| E[Logstash]
+    E -->|Indexation| F[Elasticsearch]
+    F -->|Visualisation| G[Kibana]
+    F -->|Traitement avancé| H[Hadoop / Spark]
 ```
 
 1. **Collecte des données via une API météo**.
@@ -218,5 +221,3 @@ Ce projet a permis de :
 ✅ Appliquer un **traitement big data avec Hadoop et Spark**.
 
 ---
-
-
