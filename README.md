@@ -123,13 +123,64 @@ Nous avons défini un **mapping personnalisé** (`define_mapping.py`) pour optim
 ---
 
 ## **6. Requêtes Elasticsearch et Visualisation Kibana**
-
+Les requêtes utilisées pour interroger Elasticsearch sont définies dans le fichier `logstash/search_queries.py`
 Nous avons exécuté plusieurs requêtes :
 1. **Requête textuelle** : Recherche des données par ville.
 2. **Agrégation** : Calcul de la température moyenne par ville.
 3. **Requête N-gram** : Recherche partielle.
 4. **Requête fuzzy** : Recherche approximative.
 5. **Requête temporelle** : Données météorologiques sur une période donnée.
+
+1. **Requête textuelle** : Recherche de toutes les données pour une ville donnée.
+   ```json
+   {
+     "query": {
+       "match": { "city": "Paris" }
+     }
+   }
+   ```
+
+2. **Requête avec agrégation** : Moyenne de la température par ville.
+   ```json
+   {
+     "size": 0,
+     "aggs": {
+       "avg_temp": { "avg": { "field": "temperature" } }
+     }
+   }
+   ```
+
+3. **Requête N-gram** : Recherche partielle sur le nom de la ville.
+   ```json
+   {
+     "query": {
+       "match": { "city.ngram": "Par" }
+     }
+   }
+   ```
+
+4. **Requête fuzzy** : Recherche approximative sur le nom de la ville.
+   ```json
+   {
+     "query": {
+       "fuzzy": { "city": { "value": "Pariz", "fuzziness": 2 } }
+     }
+   }
+   ```
+
+5. **Requête temporelle** : Recherche des données sur une période donnée.
+   ```json
+   {
+     "query": {
+       "range": {
+         "timestamp": {
+           "gte": "2025-02-19T00:00:00",
+           "lte": "2025-02-20T00:00:00"
+         }
+       }
+     }
+   }
+   ```
 
 Les résultats sont stockés dans `logs/results_*.json`.
 
@@ -167,4 +218,5 @@ Ce projet a permis de :
 ✅ Appliquer un **traitement big data avec Hadoop et Spark**.
 
 ---
+
 
