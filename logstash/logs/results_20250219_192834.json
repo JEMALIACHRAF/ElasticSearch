@@ -1,0 +1,766 @@
+{
+    "\ud83d\udd0d Recherche Textuelle : Donn\u00e9es de Paris": {
+        "took": 262,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 22,
+                "relation": "eq"
+            },
+            "max_score": 2.5228155,
+            "hits": [
+                {
+                    "_index": "weather_data",
+                    "_id": "ST1tH5UBuq0ePwpY9GgK",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 5.0,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.9,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 1.4,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:17:33Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 1.4, \"wind_dir_10m:d\": 176.1, \"wind_gusts_10m_1h:ms\": 5.0, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.6, \"t_max_2m_24h:C\": 10.9, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 176.1,
+                        "t_2m:C": 9.6,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:17:33.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:17:33Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "Pz1sH5UBuq0ePwpY9GjD",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 5.1,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 11.0,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 1.4,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:16:28Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 1.4, \"wind_dir_10m:d\": 176.3, \"wind_gusts_10m_1h:ms\": 5.1, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.6, \"t_max_2m_24h:C\": 11.0, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 176.3,
+                        "t_2m:C": 9.6,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:16:28.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:16:28Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "jT1qH5UBuq0ePwpY1Gd7",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.9,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.7,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.6,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:06:22Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.6, \"wind_dir_10m:d\": 132.2, \"wind_gusts_10m_1h:ms\": 6.9, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.7, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 132.2,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:06:22.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:06:22Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "Uz1uH5UBuq0ePwpY6mi0",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 4.6,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.9,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1020.0,
+                        "wind_speed_10m:ms": 0.7,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:18:36Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 0.7, \"wind_dir_10m:d\": 158.5, \"wind_gusts_10m_1h:ms\": 4.6, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.8, \"t_max_2m_24h:C\": 10.9, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1020, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 158.5,
+                        "t_2m:C": 9.8,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:18:36.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:18:36Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "XT1vH5UBuq0ePwpY6Gjj",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 4.6,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 11.0,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1020.0,
+                        "wind_speed_10m:ms": 0.7,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:19:41Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 0.7, \"wind_dir_10m:d\": 158.7, \"wind_gusts_10m_1h:ms\": 4.6, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.8, \"t_max_2m_24h:C\": 11.0, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1020, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 158.7,
+                        "t_2m:C": 9.8,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:19:41.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:19:41Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "mT1qH5UBuq0ePwpY1GeB",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.9,
+                        "wind_gusts_10m_24h:ms": 8.0,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.7,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.6,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:08:29Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.6, \"wind_dir_10m:d\": 133.3, \"wind_gusts_10m_1h:ms\": 6.9, \"wind_gusts_10m_24h:ms\": 8.0, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.7, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 133.3,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:08:29.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:08:29Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "nz1qH5UBuq0ePwpY1GeB",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.9,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.6,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:10:35Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 134.9, \"wind_gusts_10m_1h:ms\": 6.9, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.6, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 134.9,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:10:35.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:10:35Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "pj1qH5UBuq0ePwpY1GeB",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.8,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.0,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:12:43Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 136.1, \"wind_gusts_10m_1h:ms\": 6.8, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.0, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 136.1,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:12:43.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:12:43Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "9T1qH5UBuq0ePwpY1GeB",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.8,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 9.6,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:14:52Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 137.2, \"wind_gusts_10m_1h:ms\": 6.8, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 9.3, \"t_max_2m_24h:C\": 9.6, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 137.2,
+                        "t_2m:C": 9.3,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:14:52.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:14:52Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "_z1qH5UBuq0ePwpY1GeB",
+                    "_score": 2.5228155,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.8,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 9.6,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:17:00Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 138.4, \"wind_gusts_10m_1h:ms\": 6.8, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 8.9, \"t_max_2m_24h:C\": 9.6, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 138.4,
+                        "t_2m:C": 8.9,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:17:00.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:17:00Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                }
+            ]
+        }
+    },
+    "\ud83d\udcca Agr\u00e9gation : Moyenne des temp\u00e9ratures par ville": {
+        "took": 184,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 220,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        },
+        "aggregations": {
+            "avg_temperature_per_city": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": [
+                    {
+                        "key": "Beijing",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": -0.22727271914482117
+                        }
+                    },
+                    {
+                        "key": "Dubai",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 22.44545468417081
+                        }
+                    },
+                    {
+                        "key": "London",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 7.672727173024958
+                        }
+                    },
+                    {
+                        "key": "Lyon",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 10.995454614812678
+                        }
+                    },
+                    {
+                        "key": "Moscow",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": -7.390909173271873
+                        }
+                    },
+                    {
+                        "key": "New York",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": -2.009090932932767
+                        }
+                    },
+                    {
+                        "key": "Paris",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 9.668181896209717
+                        }
+                    },
+                    {
+                        "key": "Sydney",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 18.959091099825773
+                        }
+                    },
+                    {
+                        "key": "S\u00c3\u00a3o Paulo",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 28.99090931632302
+                        }
+                    },
+                    {
+                        "key": "Tokyo",
+                        "doc_count": 22,
+                        "avg_temp": {
+                            "value": 0.6045454632152211
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "\ud83d\udd21 N-gram : Suggestion de ville avec 'Par'": {
+        "took": 44,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 22,
+                "relation": "eq"
+            },
+            "max_score": 1.0,
+            "hits": [
+                {
+                    "_index": "weather_data",
+                    "_id": "ST1tH5UBuq0ePwpY9GgK",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 5.0,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.9,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 1.4,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:17:33Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 1.4, \"wind_dir_10m:d\": 176.1, \"wind_gusts_10m_1h:ms\": 5.0, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.6, \"t_max_2m_24h:C\": 10.9, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 176.1,
+                        "t_2m:C": 9.6,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:17:33.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:17:33Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "Pz1sH5UBuq0ePwpY9GjD",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 5.1,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 11.0,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 1.4,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:16:28Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 1.4, \"wind_dir_10m:d\": 176.3, \"wind_gusts_10m_1h:ms\": 5.1, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.6, \"t_max_2m_24h:C\": 11.0, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 176.3,
+                        "t_2m:C": 9.6,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:16:28.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:16:28Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "jT1qH5UBuq0ePwpY1Gd7",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.9,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.7,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.6,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:06:22Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.6, \"wind_dir_10m:d\": 132.2, \"wind_gusts_10m_1h:ms\": 6.9, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.7, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 132.2,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:06:22.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:06:22Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "Uz1uH5UBuq0ePwpY6mi0",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 4.6,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.9,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1020.0,
+                        "wind_speed_10m:ms": 0.7,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:18:36Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 0.7, \"wind_dir_10m:d\": 158.5, \"wind_gusts_10m_1h:ms\": 4.6, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.8, \"t_max_2m_24h:C\": 10.9, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1020, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 158.5,
+                        "t_2m:C": 9.8,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:18:36.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:18:36Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "XT1vH5UBuq0ePwpY6Gjj",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 4.6,
+                        "wind_gusts_10m_24h:ms": 7.9,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 11.0,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1020.0,
+                        "wind_speed_10m:ms": 0.7,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T18:19:41Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 0.7, \"wind_dir_10m:d\": 158.7, \"wind_gusts_10m_1h:ms\": 4.6, \"wind_gusts_10m_24h:ms\": 7.9, \"t_2m:C\": 9.8, \"t_max_2m_24h:C\": 11.0, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1020, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 158.7,
+                        "t_2m:C": 9.8,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T18:19:41.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T18:19:41Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "mT1qH5UBuq0ePwpY1GeB",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.9,
+                        "wind_gusts_10m_24h:ms": 8.0,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.7,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.6,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:08:29Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.6, \"wind_dir_10m:d\": 133.3, \"wind_gusts_10m_1h:ms\": 6.9, \"wind_gusts_10m_24h:ms\": 8.0, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.7, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 133.3,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:08:29.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:08:29Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "nz1qH5UBuq0ePwpY1GeB",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.9,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.6,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:10:35Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 134.9, \"wind_gusts_10m_1h:ms\": 6.9, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.6, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 134.9,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:10:35.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:10:35Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "pj1qH5UBuq0ePwpY1GeB",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.8,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 10.0,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:12:43Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 136.1, \"wind_gusts_10m_1h:ms\": 6.8, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 10.0, \"t_max_2m_24h:C\": 10.0, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 136.1,
+                        "t_2m:C": 10.0,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:12:43.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:12:43Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "9T1qH5UBuq0ePwpY1GeB",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.8,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 9.6,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:14:52Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 137.2, \"wind_gusts_10m_1h:ms\": 6.8, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 9.3, \"t_max_2m_24h:C\": 9.6, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 137.2,
+                        "t_2m:C": 9.3,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:14:52.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:14:52Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                },
+                {
+                    "_index": "weather_data",
+                    "_id": "_z1qH5UBuq0ePwpY1GeB",
+                    "_score": 1.0,
+                    "_ignored": [
+                        "event.original.keyword"
+                    ],
+                    "_source": {
+                        "wind_gusts_10m_1h:ms": 6.8,
+                        "wind_gusts_10m_24h:ms": 8.1,
+                        "precip_24h:mm": 0.1,
+                        "t_max_2m_24h:C": 9.6,
+                        "latitude": 48.8566,
+                        "msl_pressure:hPa": 1019.0,
+                        "wind_speed_10m:ms": 2.5,
+                        "event": {
+                            "original": "{\"timestamp\": \"2025-02-19T17:17:00Z\", \"location\": \"Paris\", \"latitude\": 48.8566, \"longitude\": 2.3522, \"wind_speed_10m:ms\": 2.5, \"wind_dir_10m:d\": 138.4, \"wind_gusts_10m_1h:ms\": 6.8, \"wind_gusts_10m_24h:ms\": 8.1, \"t_2m:C\": 8.9, \"t_max_2m_24h:C\": 9.6, \"t_min_2m_24h:C\": 1.7, \"msl_pressure:hPa\": 1019, \"precip_1h:mm\": 0.0, \"precip_24h:mm\": 0.1}"
+                        },
+                        "precip_1h:mm": 0.0,
+                        "wind_dir_10m:d": 138.4,
+                        "t_2m:C": 8.9,
+                        "@version": "1",
+                        "@timestamp": "2025-02-19T17:17:00.000Z",
+                        "longitude": 2.3522,
+                        "timestamp": "2025-02-19T17:17:00Z",
+                        "location": "Paris",
+                        "t_min_2m_24h:C": 1.7
+                    }
+                }
+            ]
+        }
+    },
+    "\ud83e\udd16 Fuzzy Matching : Recherche approximative pour 'Pariz'": {
+        "took": 7,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 0,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        }
+    },
+    "\ud83d\udcc5 S\u00e9rie Temporelle : \u00c9volution de la temp\u00e9rature": {
+        "took": 47,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 220,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        },
+        "aggregations": {
+            "temperature_over_time": {
+                "buckets": [
+                    {
+                        "key_as_string": "2025-02-19T00:00:00.000Z",
+                        "key": 1739923200000,
+                        "doc_count": 220,
+                        "avg_temperature": {
+                            "value": 8.970909142223272
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "\ud83d\udd0d Recherche Textuelle : Donn\u00e9es de Paris": {
+        "took": 339,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 0,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        }
+    },
+    "\ud83d\udcca Agr\u00e9gation : Moyenne des temp\u00e9ratures par ville": {
+        "took": 1271,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 0,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        },
+        "aggregations": {
+            "avg_temperature_per_city": {
+                "doc_count_error_upper_bound": 0,
+                "sum_other_doc_count": 0,
+                "buckets": []
+            }
+        }
+    },
+    "\ud83d\udd21 N-gram : Suggestion de ville avec 'Par'": {
+        "took": 717,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 0,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        }
+    },
+    "\ud83e\udd16 Fuzzy Matching : Recherche approximative pour 'Pariz'": {
+        "took": 423,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 0,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        }
+    },
+    "\ud83d\udcc5 S\u00e9rie Temporelle : \u00c9volution de la temp\u00e9rature": {
+        "took": 165,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 0,
+                "relation": "eq"
+            },
+            "max_score": null,
+            "hits": []
+        },
+        "aggregations": {
+            "temperature_over_time": {
+                "buckets": []
+            }
+        }
+    }
+}
