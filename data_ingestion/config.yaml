@@ -13,4 +13,4 @@ locations:
   - { name: "São Paulo", lat: -23.5505, lon: -46.6333 }
 parameters: "wind_speed_10m:ms,wind_dir_10m:d,wind_gusts_10m_1h:ms,wind_gusts_10m_24h:ms,t_2m:C,t_max_2m_24h:C,t_min_2m_24h:C,msl_pressure:hPa,precip_1h:mm,precip_24h:mm"
 output_format: "json"
-interval: 60  # Fetch data every 1 minutes
+interval: 30  # Fetch data every 1/2 minutes
